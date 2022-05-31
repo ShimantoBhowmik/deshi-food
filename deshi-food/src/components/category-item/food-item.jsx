@@ -12,7 +12,7 @@ const FoodItem = ({ food }) => {
       />
       <div className='food-body'>
         <h2>{title}</h2>
-        <p>Add this delicious delight to your cart Now!</p>
+        <p>Enjoy this delight today!</p>
       </div>
     </div>
   );
