@@ -1,35 +1,30 @@
-import FoodMenu from './components/food-menu/food-menu.jsx';
+import {Routes, Route, Outlet} from 'react-router-dom';
 
+import HomePage from "./routes/home/homepage";
+
+const Nav = () =>{
+  return(
+    <div>
+    <div>
+      <h1>Nav Bar</h1>
+    </div>
+    <Outlet/>
+    </div>
+  )
+}
+
+const Shop = () =>{
+  return <p>Shop Shop Shop</p>
+}
 const App = () => {
-  const foods = [
-    {
-      id: 1,
-      title: 'Rice',
-      imageUrl: 'https://i.ibb.co/2SMJcff/8.jpg',
-    },
-    {
-      id: 2,
-      title: 'Curry',
-      imageUrl: 'https://i.ibb.co/KFLNNnG/recipe.jpg',
-    },
-    {
-      id: 3,
-      title: 'Snacks',
-      imageUrl: 'https://i.ibb.co/5Th7xCs/12.jpg',
-    },
-    {
-      id: 4,
-      title: 'Biriyani',
-      imageUrl: 'https://i.ibb.co/H2xbs8w/2.jpg',
-    },
-    {
-      id: 5,
-      title: 'Dessert',
-      imageUrl: 'https://i.ibb.co/8BbjTSw/Whats-App-Image-2022-05-28-at-12-36-25-PM.jpg',
-    },
-  ];
-
-  return <FoodMenu foods={foods} />;
+  return (
+    <Routes>
+      <Route path='/' element={<Nav/>}>
+        <Route path='home' element={<HomePage/>} />
+        <Route path='shop' element={<Shop/>} />
+      </Route>
+  </Routes>
+  );
 };
 
 export default App;
