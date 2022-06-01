@@ -8,12 +8,9 @@ import { signOutUser } from '../../utils/firebase/firebase';
 import './nav.scss';
 
 const Nav = () => {
-  const { currUser, setCurrUser } = useContext(UserContext);
+  const { currUser } = useContext(UserContext);
   
-  const signOutHandler = async() =>{
-    await signOutUser();
-    setCurrUser(null);
-  }
+
 
   return (
     <Fragment>

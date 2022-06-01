@@ -1,5 +1,5 @@
 import { createContext, useState, useEffect } from "react";
-import { Listener } from "../utils/firebase/firebase";
+import { Listener,createUserDoc } from "../utils/firebase/firebase";
 
 export const UserContext = createContext({
     currUser: null,
@@ -12,7 +12,10 @@ export const UserProvider = ({ children }) => {
 
     useEffect(() => {
         const stopListening = Listener((user) =>{
-            console.log(user);
+            if(user){
+                createUserDoc(user); 
+            }
+            setCurrUser(user);
         })
 
         return stopListening;
