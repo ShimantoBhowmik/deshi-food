@@ -3,7 +3,7 @@ import HomePage from './routes/home/homepage';
 import Nav from './routes/Navigation/nav';
 
 const Shop = () => {
-  return <h1>I am the shop page</h1>;
+  return <h1>SHOP PAGE</h1>;
 };
 
 const App = () => {
