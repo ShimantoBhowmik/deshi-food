@@ -21,7 +21,7 @@ const SignUp = () =>{
     }
     const submitHandler = async (event) =>{
         event.preventDefault();
-        if( password != confirmPassword){
+        if( password !== confirmPassword){
             alert("passwords do not match each other!");
             return;
         }
@@ -50,7 +50,7 @@ const SignUp = () =>{
     };
 
     return(
-        <div className="sign-up\">
+        <div className="sign-up">
             <h2>Create an account</h2>
             <span>Sign up with email and password</span>
             <form onSubmit={submitHandler}>
