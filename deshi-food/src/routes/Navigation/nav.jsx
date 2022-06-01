@@ -1,10 +1,15 @@
-import { Fragment } from 'react';
+import { Fragment, useContext } from 'react';
 import { Outlet, Link } from 'react-router-dom';
 
 import {ReactComponent as Logo} from '../../assets/logo.svg'
+import { UserContext } from '../../contexts/user';
+
 import './nav.scss';
 
 const Nav = () => {
+  const { currUser } = useContext(UserContext);
+  
+  
   return (
     <Fragment>
       <div className='navigation'>
