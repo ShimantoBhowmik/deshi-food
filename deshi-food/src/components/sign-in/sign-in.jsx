@@ -29,8 +29,15 @@ const SignInForm = () =>{
         try{
             const response = await signInUserEmailPassword(email,password);
             console.log(response);
+            resetForm();
         }catch(err){
-            
+            if(err.code ==="auth/wrong-password"){
+                alert('The email and password combination do not match')
+            } else if( err.code ==="auth/user-not-found"){
+                alert('No account exists with this email')
+            }else{
+                console.log(err);
+            }
         }
 
     }
@@ -53,7 +60,7 @@ const SignInForm = () =>{
                 <Form label="Password" type = 'password' required onChange={eventChange} name='password' value={password}/>
                 <div className="buttons">
                     <Button type='submit'>Sign In</Button>
-                    <Button buttonType ='google' onClick={signInGoogle}>Google sign In</Button>
+                    <Button type="button" buttonType ='google' onClick={signInGoogle}>Google sign In</Button>
                 </div>
             </form>
         </div>
