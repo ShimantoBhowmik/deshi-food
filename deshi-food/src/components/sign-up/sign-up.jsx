@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { createUserEmailPassword,createUserDoc } from "../../utils/firebase/firebase";
+import Form  from "../form/form";
+import Button from "../button/button";
+import './sign-up.scss';
 
 const defaultFields = {
         displayName:'',
@@ -47,21 +50,21 @@ const SignUp = () =>{
     };
 
     return(
-        <div>
-            <h1>Sign up with email and password</h1>
+        <div className="sign-up\">
+            <h2>Create an account</h2>
+            <span>Sign up with email and password</span>
             <form onSubmit={submitHandler}>
-                <label>Name</label>
-                <input type = 'text' required onChange={eventChange} name='displayName' value={displayName}/>
                 
-                <label>Email</label>
-                <input type = 'email' required onChange={eventChange} name='email' value={email}/>
+                <Form label="Display Name" type = 'text' required onChange={eventChange} name='displayName' value={displayName}/>
                 
-                <label>Password</label>
-                <input type = 'password' required onChange={eventChange} name='password' value={password}/>
                 
-                <label>Confirm Password</label>
-                <input type = 'password' required onChange={eventChange} name='confirmPassword' value={confirmPassword}/>
-                <button type='submit'>Sign Up</button>
+                <Form label="Email" type = 'email' required onChange={eventChange} name='email' value={email}/>
+                
+            
+                <Form label="Password" type = 'password' required onChange={eventChange} name='password' value={password}/>
+                
+                <Form label="Confirm Password" type = 'password' required onChange={eventChange} name='confirmPassword' value={confirmPassword}/>
+                <Button type='submit'>Sign Up</Button>
             </form>
         </div>
     )
