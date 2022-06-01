@@ -4,7 +4,6 @@ import { Outlet, Link } from 'react-router-dom';
 import {ReactComponent as Logo} from '../../assets/logo.svg'
 import { UserContext } from '../../contexts/user';
 import { signOutUser } from '../../utils/firebase/firebase';
-
 import './nav.scss';
 
 const Nav = () => {
@@ -24,7 +23,7 @@ const Nav = () => {
           </Link>
           {
             currUser ? (
-              <span className="link" onClick={signOutHandler}>
+              <span className="link" onClick={signOutUser}>
                 SIGN OUT
               </span>
             ) :(
