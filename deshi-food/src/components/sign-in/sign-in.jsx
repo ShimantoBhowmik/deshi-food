@@ -22,7 +22,7 @@ const SignInForm = () =>{
     }
     const signInGoogle = async () =>{
         const { user } = await signInWithGooglePopup();
-        await createUserDoc(user);
+        await createUserDoc(user); 
     }
 
     const submitHandler = async (event) =>{
@@ -31,7 +31,6 @@ const SignInForm = () =>{
 
         try{
             const {user} = await signInUserEmailPassword(email,password);
-            setCurrUser(user);
             resetForm();
         }catch(err){
             if(err.code ==="auth/wrong-password"){
