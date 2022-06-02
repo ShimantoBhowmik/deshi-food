@@ -1,6 +1,6 @@
-import './food-item.scss';
+import './category-item.scss';
 
-const FoodItem = ({ food }) => {
+const CategoryItem = ({ food }) => {
   const { imageUrl, title } = food;
   return (
     <div className='foods'>
@@ -18,4 +18,4 @@ const FoodItem = ({ food }) => {
   );
 };
 
-export default FoodItem;
+export default CategoryItem;

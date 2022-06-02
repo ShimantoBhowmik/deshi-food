@@ -1,4 +1,4 @@
-import FoodItem from '../category-item/food-item';
+import CategoryItem from '../category-item/category-item';
 
 import './food-menu.scss';
 
@@ -6,7 +6,7 @@ const FoodMenu = ({ foods }) => {
   return (
     <div className='food-menu'>
       {foods.map((food) => (
-        <FoodItem key={food.id} food={food} />
+        <CategoryItem key={food.id} food={food} />
       ))}
     </div>
   );
