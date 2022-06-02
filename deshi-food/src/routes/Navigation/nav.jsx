@@ -4,6 +4,7 @@ import { Outlet, Link } from 'react-router-dom';
 import {ReactComponent as Logo} from '../../assets/logo.svg'
 import { UserContext } from '../../contexts/user';
 import { signOutUser } from '../../utils/firebase/firebase';
+import ShoppingCart from '../../components/shopping-cart-icon/shopping-cart';
 import './nav.scss';
 
 const Nav = () => {
@@ -32,6 +33,7 @@ const Nav = () => {
               </Link>
             )
           }
+          <ShoppingCart />
         </div>
       </div>
       <Outlet />
