@@ -1,5 +1,7 @@
-import { createContext, useState } from "react";
-import FOODS from '../data.json';
+import { createContext, useState, useEffect } from "react";
+import { addCollectionAndDocuments } from "../utils/firebase/firebase.js";
+//used to import data
+//import SHOP_DATA from '../data.js';
 
 
 export const FoodContext = createContext({
@@ -7,7 +9,13 @@ export const FoodContext = createContext({
 });
 
 export const FoodProvider = ({children}) => {
-    const [foods, setFood] = useState(FOODS);
+    const [foods] = useState([]);
+
+    //used to push data to database
+    // useEffect(() => {
+    //     addCollectionAndDocuments('categories', SHOP_DATA);
+    // }, []);
+
     const value = {foods};
 
     return(

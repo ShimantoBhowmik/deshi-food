@@ -10,22 +10,22 @@ const HomePage = () => {
     {
       id: 2,
       title: 'Curry',
-      imageUrl: 'https://i.ibb.co/KFLNNnG/recipe.jpg',
+      imageUrl: 'https://i.ibb.co/LCFrS27/chickencurry.webp',
     },
     {
       id: 3,
-      title: 'Snacks',
-      imageUrl: 'https://i.ibb.co/5Th7xCs/12.jpg',
+      title: 'Biriyani',
+      imageUrl: 'https://i.ibb.co/xjXDjXf/chicb.jpg',
     },
     {
       id: 4,
-      title: 'Biriyani',
-      imageUrl: 'https://i.ibb.co/H2xbs8w/2.jpg',
+      title: 'Snacks',
+      imageUrl: 'https://i.ibb.co/K9ZHcpZ/fuch.webp',
     },
     {
       id: 5,
       title: 'Dessert',
-      imageUrl: 'https://i.ibb.co/8BbjTSw/Whats-App-Image-2022-05-28-at-12-36-25-PM.jpg',
+      imageUrl: 'https://i.ibb.co/6NNYL3w/payesh.webp',
     },
   ];
 
