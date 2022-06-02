@@ -1,15 +1,19 @@
 import { Fragment, useContext } from 'react';
 import { Outlet, Link } from 'react-router-dom';
 
+import ShoppingCart from '../../components/shopping-cart-icon/shopping-cart';
+import Dropdown from '../../components/shopping-cart-dropdown/dropdown';
+
 import {ReactComponent as Logo} from '../../assets/logo.svg'
 import { UserContext } from '../../contexts/user';
+import { CartContext } from '../../contexts/shopping-context';
 import { signOutUser } from '../../utils/firebase/firebase';
-import ShoppingCart from '../../components/shopping-cart-icon/shopping-cart';
+
 import './nav.scss';
 
 const Nav = () => {
   const { currUser } = useContext(UserContext);
-  
+  const{ isCartOpen } = useContext(CartContext);
 
 
   return (
@@ -35,6 +39,7 @@ const Nav = () => {
           }
           <ShoppingCart />
         </div>
+        {isCartOpen && <Dropdown />}
       </div>
       <Outlet />
     </Fragment>
