@@ -1,6 +1,6 @@
 import './food-item.scss';
 
-const FoodItem = ({ cartItem }) => {
+const CartItem = ({ cartItem }) => {
   const { imageUrl, price, name, quantity } = cartItem;
 
   return (
@@ -16,4 +16,4 @@ const FoodItem = ({ cartItem }) => {
   );
 };
 
-export default FoodItem;
+export default CartItem;

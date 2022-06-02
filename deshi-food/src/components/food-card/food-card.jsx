@@ -7,13 +7,13 @@ import { CartContext } from '../../contexts/shopping-context';
 import './food-card.scss';
 
 
-const FoodCard = ({ product }) =>{
+const FoodCard = ({ food }) =>{
 
-    const{name, price, imageUrl} = product;
+    const{name, price, imageUrl} = food;
 
     const{ addItemToCart } = useContext(CartContext);
 
-    const addFoodToCart = () => addItemToCart(product);
+    const addFoodToCart = () => addItemToCart(food);
 
     return (<div className = "food-card-container">
         <img src = {imageUrl} alt={`${name}`}/>
