@@ -5,7 +5,7 @@ const HomePage = () => {
     {
       id: 1,
       title: 'Rice',
-      imageUrl: 'https://i.ibb.co/2SMJcff/8.jpg',
+      imageUrl: 'https://i.ibb.co/HNMSMdG/1.jpg',
     },
     {
       id: 2,
