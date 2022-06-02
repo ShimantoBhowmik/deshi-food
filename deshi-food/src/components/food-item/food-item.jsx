@@ -4,11 +4,11 @@ const CartItem = ({ cartItem }) => {
   const { imageUrl, price, name, quantity } = cartItem;
 
   return (
-    <div className='cart-item-container'>
+    <div className='cart-container'>
       <img src={imageUrl} alt={`${name}`} />
-      <div className='item-details'>
+      <div className='item'>
         <span className='name'>{name}</span>
-        <span className='price'>
+        <span className='cost'>
           {quantity} x ${price}
         </span>
       </div>
