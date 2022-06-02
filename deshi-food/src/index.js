@@ -5,6 +5,7 @@ import './index.scss';
 import App from './App';
 import { UserProvider } from './contexts/user';
 import reportWebVitals from './reportWebVitals';
+import { FoodProvider } from './contexts/food-cotext';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -12,7 +13,9 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
     <UserProvider>
-    <App />
+      <FoodProvider>
+        <App />
+      </FoodProvider>
     </UserProvider>
     </BrowserRouter>
   </React.StrictMode>
