@@ -6,12 +6,12 @@ import { getCollectionAndDocuments } from "../utils/firebase/firebase.js";
 //import SHOP_DATA from '../data.js';
 
 
-export const FoodContext = createContext({
-    foods: [],
+export const CategoriesContext = createContext({
+    categoriesMap: {},
 });
 
-export const FoodProvider = ({children}) => {
-    const [foods] = useState([]);
+export const CategoriesProvider = ({children}) => {
+    const [categoriesMap, setCategoriesMap] = useState({});
 
     //used to push data to database
     // useEffect(() => {
@@ -21,16 +21,17 @@ export const FoodProvider = ({children}) => {
     useEffect(() => {
         const getCategoriesMap = async() => {
             const categoryMap = await getCollectionAndDocuments();
-            console.log(categoryMap);
+            
+            setCategoriesMap(categoryMap);
         }
         getCategoriesMap();
     }, []);
 
 
-    const value = {foods};
+    const value = {categoriesMap};
 
     return(
-        <FoodContext.Provider value={value}> {children} </FoodContext.Provider>
+        <CategoriesContext.Provider value={value}> {children} </CategoriesContext.Provider>
     )
 }
 
