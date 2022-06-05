@@ -1,5 +1,5 @@
 import { createContext, useState, useEffect } from "react";
-import { addCollectionAndDocuments } from "../utils/firebase/firebase.js";
+
 
 import { getCollectionAndDocuments } from "../utils/firebase/firebase.js";
 //used to import data
