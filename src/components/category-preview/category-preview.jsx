@@ -13,7 +13,7 @@ const CategoryPreview = ({ title, products }) => {
         </Link>
       </h2>
       <div className='preview'>
-        {products
+        {products && products
           .filter((_, idx) => idx < 4)
           .map((food) => (
             <FoodCard key={food.id} food={food} />
