@@ -1,6 +1,7 @@
 import { createContext, useEffect, useReducer } from "react";
 import { Listener,createUserDoc } from "../utils/firebase/firebase";
 
+
 export const UserContext = createContext({
     currUser: null,
     setCurrUser: () => null,

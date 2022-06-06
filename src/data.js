@@ -1,6 +1,6 @@
 const SHOP_DATA = [
   {
-    id:1,
+    
     title: 'Rice',
     items: [
       {
@@ -42,7 +42,7 @@ const SHOP_DATA = [
     ],
   },
   {
-    id:2,
+    
     title: 'Curry',
     items: [
       {
@@ -84,7 +84,7 @@ const SHOP_DATA = [
     ],
   },
   {
-    id:3,
+    
     title: 'Biriyani',
     items: [
       {
@@ -126,7 +126,7 @@ const SHOP_DATA = [
     ],
   },
   {
-    id: 4,
+    
     title: 'Snacks',
     items: [
       {
@@ -169,7 +169,6 @@ const SHOP_DATA = [
     ],
   },
   {
-    id: 5,
     title: 'Dessert',
     items: [
       {
