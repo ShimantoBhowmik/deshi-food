@@ -41,6 +41,8 @@ export const getCollectionAndDocuments = async() => {
   const collectionRef = collection(dbase, 'categories');
   const qr = query(collectionRef);
 
+
+
   const querySnapshot = await getDocs(qr);
   return querySnapshot.docs.map((docSnapshot) => docSnapshot.data());
   
