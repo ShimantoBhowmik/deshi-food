@@ -11,6 +11,9 @@
 # production
 /build
 
+#ignore the publishable key for react
+.env
+
 # misc
 .DS_Store
 .env.local
