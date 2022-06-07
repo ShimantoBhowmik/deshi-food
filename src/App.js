@@ -6,7 +6,7 @@ import SignIn from './routes/sign-in/sign-in';
 import CheckOutPage from './routes/checkoutPage/checkoutPage';
 import Shop from './routes/shop/shop';
 import {  useEffect } from "react";
-import { setCurrUser } from './store/User/user-action';
+import { setCurrUser } from './store/user/user-action';
 import { Listener,createUserDoc } from "./utils/firebase/firebase"
 
 const App = () => {

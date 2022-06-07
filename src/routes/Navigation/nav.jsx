@@ -8,7 +8,7 @@ import {ReactComponent as Logo} from '../../assets/logo.svg'
 
 import { CartContext } from '../../contexts/shopping-context';
 import { signOutUser } from '../../utils/firebase/firebase';
-import { selectCurrUser } from '../../store/User/user-selector';
+import { selectCurrUser } from '../../store/user/user-selector';
 import './nav.scss';
 
 const Nav = () => {
