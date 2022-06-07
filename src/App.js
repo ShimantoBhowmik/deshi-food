@@ -7,7 +7,8 @@ import CheckOutPage from './routes/checkoutPage/checkoutPage';
 import Shop from './routes/shop/shop';
 import {  useEffect } from "react";
 import { setCurrUser } from './store/user/user-action';
-import { Listener,createUserDoc } from "./utils/firebase/firebase"
+import { Listener,createUserDoc } from "./utils/firebase/firebase";
+import { fetchCategoriesAsync } from './store/categories/category-action';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -24,6 +25,10 @@ const App = () => {
 
         return stopListening;
     });
+    
+    useEffect(() => {
+      dispatch(fetchCategoriesAsync());
+  }, []);
 
   return (
     <Routes>

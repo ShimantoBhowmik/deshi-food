@@ -6,6 +6,7 @@ import { useParams } from 'react-router-dom';
 
 import { selectCategoriesIsLoading, selectCategoriesMap } from '../../store/categories/category-selector';
 import Spinner from '../../components/spinner/spinner';
+import { useDispatch } from 'react-redux';
 
 import './category.scss';
 
@@ -17,10 +18,12 @@ const Category = () =>{
     const categoriesMap = useSelector(selectCategoriesMap);
     const isLoading = useSelector(selectCategoriesIsLoading);
     const[products, setProducts] = useState([categoriesMap[category]]);
-
+    
     useEffect(()=>{
         setProducts(categoriesMap[category]);
     }, [category, categoriesMap])
+
+    
 
      return (
     <Fragment>
