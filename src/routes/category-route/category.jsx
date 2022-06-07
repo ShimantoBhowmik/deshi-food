@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom';
 
 import { selectCategoriesIsLoading, selectCategoriesMap } from '../../store/categories/category-selector';
 import Spinner from '../../components/spinner/spinner';
-import { useDispatch } from 'react-redux';
+
 
 import './category.scss';
 

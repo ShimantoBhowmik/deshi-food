@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import CategoriesPreview from '../categories-preview-routes/categories-preview';
 import Category from '../category-route/category';
-import { fetchCategoriesAsync, fetchCategoriesStart } from '../../store/categories/category-action';
+import { fetchCategoriesAsync } from '../../store/categories/category-action';
 
 import './shop.scss';
 
