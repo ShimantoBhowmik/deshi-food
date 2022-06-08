@@ -1,5 +1,5 @@
 import './button.scss';
-
+import { ButtonSpinner } from './button-styles';
 
 const BUTTON_TYPES = {
     google: 'google-sign',
@@ -8,10 +8,10 @@ const BUTTON_TYPES = {
 }
 
 
-const Button = ({children, buttonType, ...Props}) =>{
+const Button = ({children, buttonType, isLoading, ...Props}) =>{
     return(
-        <button className={`button ${BUTTON_TYPES[buttonType]}`} {...Props}>
-            {children}
+        <button disabled = {isLoading} className={`button ${BUTTON_TYPES[buttonType]}`} {...Props}>
+            {isLoading ? <ButtonSpinner /> : children}
         </button>
     )
 }
