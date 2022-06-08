@@ -6,6 +6,8 @@ import { selectCartItems, selectCartTotal } from '../../store/cart/cart-selector
 
 import './checkoutPage.scss'
 import CheckoutItem from '../../components/checkout-item/checkout-item';
+import Payment from '../../components/payments/payments';
+
 
 const CheckOutPage = () =>{
     // const{ cartItems, cartTotal } = useContext(CartContext);
@@ -39,6 +41,7 @@ const CheckOutPage = () =>{
                 })
             }
             <span className="total">Total: ${cartTotal}</span>
+            <Payment />
         </div>
     )
 }
