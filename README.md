@@ -1,4 +1,4 @@
-# Project:deshi-food
+# Project : deshi-food
  A Restaurant website with famous Bengali dishes.
 
 ## Technologies used and Concepts Utilized
